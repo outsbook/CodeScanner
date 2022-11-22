@@ -19,6 +19,7 @@ struct CodeScannerView: UIViewControllerRepresentable {
     var isTorchOn: Bool
     var isFocusOn: Bool
     var isVibrateOnSuccess: Bool
+    var isStatusBarHidden: Bool
     var onDone: (Result<CodeScanResult, CodeScanError>) -> Void
 
     init(
@@ -30,6 +31,7 @@ struct CodeScannerView: UIViewControllerRepresentable {
         isTorchOn: Bool = false,
         isFocusOn: Bool = true,
         isVibrateOnSuccess: Bool = true,
+        isStatusBarHidden: Bool = false,
         onDone: @escaping (Result<CodeScanResult, CodeScanError>) -> Void
     ) {
         self.sessionId = sessionId
@@ -40,6 +42,7 @@ struct CodeScannerView: UIViewControllerRepresentable {
         self.isTorchOn = isTorchOn
         self.isFocusOn = isFocusOn
         self.isVibrateOnSuccess = isVibrateOnSuccess
+        self.isStatusBarHidden = isStatusBarHidden
         self.onDone = onDone
     }
 

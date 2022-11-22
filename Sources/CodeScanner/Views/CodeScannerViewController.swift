@@ -82,7 +82,7 @@ extension CodeScannerView {
         }
 
         override public var prefersStatusBarHidden: Bool {
-            true
+            parentView.isStatusBarHidden
         }
 
         override public var supportedInterfaceOrientations: UIInterfaceOrientationMask {
